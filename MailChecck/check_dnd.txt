@@ -1,0 +1,7 @@
+aurdino - pins
+	timers
+	drop cycles
+	interrupts
+	crystal
+
+BLINK

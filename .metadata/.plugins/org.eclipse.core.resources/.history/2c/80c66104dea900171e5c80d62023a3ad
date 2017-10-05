@@ -22,8 +22,8 @@ public class eAttachment {
 	public static void main(String [] args){
 
 		  String to="lakshyammu3@gmail.com";//change accordingly
-		  final String user="il@gmail.com";//change accordingly
-		  final String password="ds";//change accordingly
+		  final String user="ishaanveerdadhwal@gmail.com";//change accordingly
+		  final String password="datastructures";//change accordingly
 		  final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 		  //1) get the session object   
 		  Properties properties = System.getProperties();
@@ -38,7 +38,7 @@ public class eAttachment {
 		     properties.put("mail.transport.protocol", "smtp");
 
 		  properties.put("mail.smtp.auth", "true");
-		  try {
+
 		  Session session = Session.getDefaultInstance(properties,
 		   new javax.mail.Authenticator() {
 		   protected PasswordAuthentication getPasswordAuthentication() {
@@ -47,7 +47,7 @@ public class eAttachment {
 		  });
 		   
 		  //2) compose message   
-		  
+		  try{
 		    MimeMessage message = new MimeMessage(session);
 		    message.setFrom(new InternetAddress(user,"IVD"));
 		    message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
@@ -60,7 +60,7 @@ public class eAttachment {
 		    //4) create new MimeBodyPart object and set DataHandler object to this object    
 		    MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
-		    String filename = "check_dnd.txt";//change accordingly
+		    String filename = "SendAttachment.java";//change accordingly
 		    DataSource source = new FileDataSource(filename);
 		    messageBodyPart2.setDataHandler(new DataHandler(source));
 		    messageBodyPart2.setFileName(filename);
@@ -78,7 +78,7 @@ public class eAttachment {
 		    Transport.send(message);
 		 
 		   System.out.println("message sent....");
-		   }catch (Exception ex) {ex.printStackTrace();}
+		   }catch (MessagingException ex) {ex.printStackTrace();}
 		 }
 	
 

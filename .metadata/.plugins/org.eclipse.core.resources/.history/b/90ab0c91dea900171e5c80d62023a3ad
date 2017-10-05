@@ -22,8 +22,8 @@ public class eAttachment {
 	public static void main(String [] args){
 
 		  String to="lakshyammu3@gmail.com";//change accordingly
-		  final String user="il@gmail.com";//change accordingly
-		  final String password="ds";//change accordingly
+		  final String user="ishaanveerdadhwal@gmail.com";//change accordingly
+		  final String password="datastructures";//change accordingly
 		  final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 		  //1) get the session object   
 		  Properties properties = System.getProperties();
